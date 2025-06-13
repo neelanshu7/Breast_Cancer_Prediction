@@ -6,7 +6,7 @@ This project uses supervised machine learning to detect breast cancer recurrence
 
 ## 📂 Project Structure
 
-- `Breast-Cancer.ipynb` — Data preprocessing, model training, evaluation and prediction
+- `Breast-Cancer-Prediction.ipynb` — Data preprocessing, model training, evaluation and prediction
 - `breast-cancer-dataset.csv` — Dataset
 - `randomforestModel.pkl` — Trained Random Forest model
 - `scaler.pkl` — Feature scaler
