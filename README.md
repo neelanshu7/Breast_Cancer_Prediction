@@ -6,12 +6,11 @@ This project uses supervised machine learning to detect breast cancer recurrence
 
 ## 📂 Project Structure
 
-- `Breast-Cancer.ipynb` — Data preprocessing, model training, and evaluation
+- `Breast-Cancer.ipynb` — Data preprocessing, model training, evaluation and prediction
+- `breast-cancer-dataset.csv` — Dataset
 - `randomforestModel.pkl` — Trained Random Forest model
 - `scaler.pkl` — Feature scaler
-- `le_breast.pkl`, `le_bq.pkl`, `le_diag.pkl` — Encoders for categorical variables
-- `predict.py` — Interactive terminal prediction script
-
+- `label_encoder.pkl` — Encoders for categorical variables
 ---
 
 ## 📊 Dataset
@@ -32,7 +31,3 @@ This project uses supervised machine learning to detect breast cancer recurrence
 
 ## 🚀 How to Run
 
-### ✅ 1. Clone the repository
-```bash
-git clone https://github.com/your-username/breast-cancer-detection.git
-cd breast-cancer-detection
