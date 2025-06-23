@@ -31,11 +31,12 @@ project/
 │   ├── login.html
 │   ├── patient-data.html
 │   ├── prediction.html
-│   ├── report.html         # You’ll create this
-│   ├── about.html          # You said already created
-│   └── contact.html        # You said already created
+│   ├── report.html
+│   ├── about.html
+│   └── contact.html 
 ├── static/
 │   ├── style.css
+│   ├── home.png
 │   ├── logo.png
 │   └── Breast_Cancer_Prediction_using_AI_and_ML.mp4
 
