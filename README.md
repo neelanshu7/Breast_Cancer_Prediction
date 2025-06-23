@@ -40,7 +40,7 @@ project/
 │   └── Breast_Cancer_Prediction_using_AI_and_ML.mp4
 
 ```
-## 📂 Project Structure
+## 📂 ML Model
 
 - `Breast-Cancer-Prediction.ipynb` — Data preprocessing, model training, evaluation and prediction
 - `breast-cancer-dataset.csv` — Dataset
