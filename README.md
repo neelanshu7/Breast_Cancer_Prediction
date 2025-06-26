@@ -26,6 +26,7 @@ project/
 ├── randomforestModel.pkl
 ├── label_encoder.pkl
 ├── scaler.pkl
+├── requirments.txt
 ├── templates/
 │   ├── index.html
 │   ├── login.html
