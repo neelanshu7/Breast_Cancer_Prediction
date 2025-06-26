@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+        .result-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 600px;
+            margin: auto;
+        }
+        .result-box h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Breast Cancer Prediction Result</h2>
+        <p><strong>Prediction:</strong> {{ result }}</p>
+        <h3>User Inputs:</h3>
+        <ul>
+            <li>Age: {{ age }}</li>
+            <li>Menopause: {{ menopause }}</li>
+            <li>Tumor Size: {{ tumor_size }}</li>
+            <li>INV: {{ inv }}</li>
+            <li>Metastasis: {{ metastasis }}</li>
+            <li>Breast: {{ breast }}</li>
+            <li>Breast Quadrant: {{ breast_quadrant }}</li>
+            <li>History: {{ history }}</li>
+        </ul>
+        <a href="/">Back to Prediction Form</a>
+    </div>
+</body>
+</html>

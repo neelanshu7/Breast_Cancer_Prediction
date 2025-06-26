@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Patient Details</title>
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="./logo.png" alt="Company Logo" />
+    </div>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <div class="auth-buttons">
+      <button class="login-btn">Login</button>
+      <button class="signup-btn">Sign Up</button>
+    </div>
+  </header><hr>
+    <h1 id="patient-header">Patient Details</h1>
+    <form action="/patient-data.html" method="POST" class="patient-form">
+        <h2>Personal Details</h2>
+        <div class="patient-fields">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+        </div>
+        <div class="patient-fields">
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" name="dob" placeholder="Enter Date of Birth" required>
+        </div>
+        <div class="patient-fields">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter Age" required step="0">
+        </div>
+        <div class="patient-fields">
+            <label for="sex">Sex</label>
+            <input id="sex" name="sex" placeholder="Select sex" list="sex-list" required>
+            <datalist id="sex-list">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option value="T">Transgender</option>
+            </datalist>
+        </div>
+        <h2 >Gurdian Details</h2>
+        <div class="patient-fields">
+            <label for="father-name">Father Name</label>
+            <input type="text" id="father-name" name="father-name" placeholder="Enter Father Name" required>
+        </div>
+        <div class="patient-fields">
+            <label for="mother-name">Mother Name</label>
+            <input type="text" id="mother-name" name="mother-name" placeholder="Enter Mother Name" required>
+        </div>
+        <div class="patient-fields">
+            <label for="gurdian-name">Gurdian Name</label>
+            <input type="text" id="gurdian-name" name="gurdian-name" placeholder="Enter Gurdian Name">
+        </div>
+        <h2 >Contact Details</h2>
+        <div class="patient-fields">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number" required>
+        </div>
+        <div class="patient-fields">
+            <label for="emergency-contact">Emergency Contact</label>
+            <input type="tel" id="emergency-contact" name="emergency-contact" placeholder="Enter Emergency Contact">
+        </div>
+        <div class="patient-fields">
+            <label for="country">Country</label>
+            <input id="country" name="country" placeholder="Enter country" required></input>
+        </div>
+        <div class="patient-fields">
+            <label for="state">State</label>
+            <input id="state" name="state" placeholder="Select state" list="state-list" required>
+            <datalist id="state-list">
+                <option value="Foriegn">Non Indians</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Ladakh">Ladakh</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+            </datalist>
+        </div>
+        <div class="patient-fields">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter Address" required></textarea>
+        </div>
+        <div class="submit-button">
+              <button type="submit" >Submit</button>
+        </div>
+    </form><br>
+    </div><hr>
+    <footer>
+        Made by Neelanshu Mitra
+    </footer>
+</body>
+</html>
