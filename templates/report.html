@@ -7,7 +7,6 @@
     <title>Prediction Report</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        /* Add specific styles for report.html here if needed */
         .report-container {
             max-width: 800px;
             margin: 20px auto;
@@ -37,39 +36,27 @@
         .report-section p strong {
             color: #555;
             display: inline-block;
-            width: 150px; /* Align labels */
+            width: 180px;
         }
         .prediction-result {
             font-size: 1.5em;
             font-weight: bold;
-            color: #28a745; /* Green for positive, change as needed */
+            color: #28a745;
             text-align: center;
             margin-top: 30px;
             padding: 15px;
             background-color: #e9f7ef;
             border-radius: 8px;
         }
-        .download-button-container {
+        footer {
             text-align: center;
-            margin-top: 30px;
-        }
-        .download-button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            text-decoration: none; /* For anchor tag */
-            display: inline-block;
-        }
-        .download-button:hover {
-            background-color: #0056b3;
+            margin-top: 50px;
+            color: #777;
         }
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="/static/logo.png" alt="Company Logo" />
@@ -84,6 +71,7 @@
             <button class="signup-btn">Sign Up</button>
         </div>
     </header>
+
     <hr>
 
     <div class="report-container">
@@ -115,7 +103,7 @@
 
         <div class="report-section">
             <h2>Prediction Input Details</h2>
-            <p><strong>Age (Prediction):</strong> {{ prediction_input_data.age_pred }}</p>
+            <p><strong>Age :</strong> {{ prediction_input_data.age }}</p>
             <p><strong>Menopause Status:</strong> {{ prediction_input_data.menopause }}</p>
             <p><strong>Tumor Size:</strong> {{ prediction_input_data.tumor_size }}</p>
             <p><strong>INV Status:</strong> {{ prediction_input_data.inv }}</p>
@@ -130,14 +118,16 @@
             <p>{{ ml_prediction_result }}</p>
         </div>
 
-        <div class="download-button-container">
-            <a href="{{ url_for('download_report_pdf') }}" class="download-button">Download Report as PDF</a>
+        <div id="js-debug-container">
+
         </div>
     </div>
 
     <hr>
+
     <footer>
         Made by Neelanshu Mitra
     </footer>
+
 </body>
 </html>
