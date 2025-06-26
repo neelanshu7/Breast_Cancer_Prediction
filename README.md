@@ -28,7 +28,7 @@ This repository contains:
   - `Diagnosis`: `Benign` or `Malignant`
 
 ---
-## 📂 Project Structure
+## 📌 Project Structure
 ```php
 project/
 │
