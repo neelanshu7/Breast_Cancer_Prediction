@@ -27,7 +27,7 @@ project/
 ├── label_encoder.pkl
 ├── scaler.pkl
 ├── requirments.txt
-├── templates/
+├── 📂 templates/
 │   ├── index.html
 │   ├── login.html
 │   ├── patient-data.html
@@ -35,7 +35,7 @@ project/
 │   ├── report.html
 │   ├── about.html
 │   └── contact.html 
-├── static/
+├── 📂 static/
 │   ├── style.css
 │   ├── home.png
 │   ├── logo.png
@@ -50,5 +50,21 @@ project/
 - `scaler.pkl` — Feature scaler
 - `label_encoder.pkl` — Encoders for categorical variables
 ---
-## 🚀 How to Run
+## 💻 How to Run the Project Locally
 
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/plantalytics.git
+   git clone https://github.com/neelanshu7/crop-classification-and-yield-prediction.git
+   cd crop-classification-and-yield-prediction
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+
+3. **Run the Flask server:**
+   ```bash
+   flask run --host=0.0.0.0
+
+4. Access the application:
+   Open your browser and navigate to **http://localhost:5000/**
