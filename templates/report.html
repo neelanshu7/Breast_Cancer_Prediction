@@ -1,0 +1,143 @@
+<!-- report.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Report</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Add specific styles for report.html here if needed */
+        .report-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .report-section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .report-section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .report-section p {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .report-section p strong {
+            color: #555;
+            display: inline-block;
+            width: 150px; /* Align labels */
+        }
+        .prediction-result {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #28a745; /* Green for positive, change as needed */
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e9f7ef;
+            border-radius: 8px;
+        }
+        .download-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .download-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none; /* For anchor tag */
+            display: inline-block;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/logo.png" alt="Company Logo" />
+        </div>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </header>
+    <hr>
+
+    <div class="report-container">
+        <h1>Breast Cancer Prediction Report</h1>
+
+        <div class="report-section">
+            <h2>Personal Details</h2>
+            <p><strong>Name:</strong> {{ personal_data.name }}</p>
+            <p><strong>Date of Birth:</strong> {{ personal_data.dob }}</p>
+            <p><strong>Age:</strong> {{ personal_data.age }}</p>
+            <p><strong>Sex:</strong> {{ personal_data.sex }}</p>
+        </div>
+
+        <div class="report-section">
+            <h2>Guardian Details</h2>
+            <p><strong>Father's Name:</strong> {{ guardian_data.father_name }}</p>
+            <p><strong>Mother's Name:</strong> {{ guardian_data.mother_name }}</p>
+            <p><strong>Guardian's Name:</strong> {{ guardian_data.guardian_name }}</p>
+        </div>
+
+        <div class="report-section">
+            <h2>Contact Details</h2>
+            <p><strong>Phone Number:</strong> {{ contact_data.phone }}</p>
+            <p><strong>Emergency Contact:</strong> {{ contact_data.emergency_contact }}</p>
+            <p><strong>Country:</strong> {{ contact_data.country }}</p>
+            <p><strong>State:</strong> {{ contact_data.state }}</p>
+            <p><strong>Address:</strong> {{ contact_data.address }}</p>
+        </div>
+
+        <div class="report-section">
+            <h2>Prediction Input Details</h2>
+            <p><strong>Age (Prediction):</strong> {{ prediction_input_data.age_pred }}</p>
+            <p><strong>Menopause Status:</strong> {{ prediction_input_data.menopause }}</p>
+            <p><strong>Tumor Size:</strong> {{ prediction_input_data.tumor_size }}</p>
+            <p><strong>INV Status:</strong> {{ prediction_input_data.inv }}</p>
+            <p><strong>Metastasis Status:</strong> {{ prediction_input_data.metastasis }}</p>
+            <p><strong>Breast:</strong> {{ prediction_input_data.breast }}</p>
+            <p><strong>Breast Quadrant:</strong> {{ prediction_input_data.breast_quadrant }}</p>
+            <p><strong>Cancer History:</strong> {{ prediction_input_data.history }}</p>
+        </div>
+
+        <div class="prediction-result">
+            <h2>ML Prediction Result:</h2>
+            <p>{{ ml_prediction_result }}</p>
+        </div>
+
+        <div class="download-button-container">
+            <a href="{{ url_for('download_report_pdf') }}" class="download-button">Download Report as PDF</a>
+        </div>
+    </div>
+
+    <hr>
+    <footer>
+        Made by Neelanshu Mitra
+    </footer>
+</body>
+</html>
