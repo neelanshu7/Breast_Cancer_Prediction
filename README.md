@@ -1,7 +1,6 @@
 # 🧠 Breast Cancer Detection using Machine Learning
 
 ### 🔗 Live Website: [PinkNeuron](https://breast-cancer-prediction-uskp.onrender.com)
-### 🔗 Live Website: [plantalytics](https://plantalytics.onrender.com)
 
 This project uses supervised machine learning to detect breast cancer recurrence based on medical features such as tumor size, age, menopause status, and more. It aims to assist in early diagnosis and decision-making for better patient outcomes.
 
