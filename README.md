@@ -2,6 +2,12 @@
 
 This project uses supervised machine learning to detect breast cancer recurrence based on medical features such as tumor size, age, menopause status, and more. It aims to assist in early diagnosis and decision-making for better patient outcomes.
 
+## 📁 About This Repository
+
+This repository contains:
+- 📓 Jupyter Notebooks for model training and evaluation (located in the `notebook/` directory)
+- 📊 Sample datasets (`.csv` files) for training and testing
+- 🌐 Flask-based web application for user interaction
 
 ## 📊 Dataset
 
